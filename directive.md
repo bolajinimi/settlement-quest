@@ -25,7 +25,7 @@ Guarantee that each completed task is paid exactly once, in the correct weekly w
 - [x] Defect report with repro, expected vs actual, severity, root cause, evidence, fix and blocking checks.
 - [x] Release checklist with a go/no-go decision.
 - [x] CI workflow observed passing on GitHub (run 37094239581).
-- [ ] Every link below opened from a logged-out or reviewer account. **TODO(you)**
+- [x] Every link below opened from a logged-out or reviewer account. 
 
 ---
 
@@ -40,7 +40,7 @@ Guarantee that each completed task is paid exactly once, in the correct weekly w
 | Release-readiness checklist | `docs/release-checklist.md` |
 | Raw test output | `results/faulty-run.txt`, `results/fixed-run.txt` |
 | CI run | `https://github.com/bolajinimi/settlement-quest/actions/runs/37094239581` (success) |
-| Loom | **TODO(you)** |
+| Loom | `https://www.loom.com/share/355b16309ef14487b4679d1574ee0f9e`|
 
 ## Reproduce
 Requires Node 20+.
@@ -88,7 +88,4 @@ Mutation check (each flaw alone): inclusive bound only → TC-04, 09 fail; missi
 - Late-arriving tasks, account changes and admin overrides are out of scope.
 - **Next:** a DB unique constraint on `task_id`, an outbox-pattern ledger write, a run lock per window, and a post-run duplicate-payout reconciliation alert.
 
-## Effort
-6hours
-https://www.loom.com/share/355b16309ef14487b4679d1574ee0f9e
 
