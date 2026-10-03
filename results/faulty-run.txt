@@ -1,5 +1,5 @@
 
- RUN  v2.1.9 /home/claude/settlement-quest
+ RUN  v2.1.9 /Users/bolaji2020/Downloads/settlement-quest
 
  ✓ test/settle.spec.ts > settlement [IMPL=faulty] > window rule > TC-00 Tuesday 09:00 UTC run covers [prev Mon 00:00Z, this Mon 00:00Z)
  ✓ test/settle.spec.ts > settlement [IMPL=faulty] > happy path > TC-01 three completed tasks mid-window → 30 credits, one notification
@@ -144,6 +144,6 @@ AssertionError: expected 20 to be 10 // Object.is equality
 
  Test Files  1 failed (1)
       Tests  6 failed | 12 passed (18)
-   Start at  03:44:06
-   Duration  394ms (transform 113ms, setup 0ms, collect 106ms, tests 23ms, environment 0ms, prepare 60ms)
+   Start at  04:30:24
+   Duration  203ms (transform 46ms, setup 0ms, collect 50ms, tests 9ms, environment 0ms, prepare 27ms)
 

@@ -1,5 +1,5 @@
 
- RUN  v2.1.9 /home/claude/settlement-quest
+ RUN  v2.1.9 /Users/bolaji2020/Downloads/settlement-quest
 
  ✓ test/settle.spec.ts > settlement [IMPL=fixed] > window rule > TC-00 Tuesday 09:00 UTC run covers [prev Mon 00:00Z, this Mon 00:00Z)
  ✓ test/settle.spec.ts > settlement [IMPL=fixed] > happy path > TC-01 three completed tasks mid-window → 30 credits, one notification
@@ -22,6 +22,6 @@
 
  Test Files  1 passed (1)
       Tests  18 passed (18)
-   Start at  03:44:07
-   Duration  365ms (transform 96ms, setup 0ms, collect 109ms, tests 11ms, environment 0ms, prepare 52ms)
+   Start at  04:30:24
+   Duration  185ms (transform 42ms, setup 0ms, collect 46ms, tests 5ms, environment 0ms, prepare 28ms)
 
