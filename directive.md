@@ -75,7 +75,7 @@ Mutation check (each flaw alone): inclusive bound only → TC-04, 09 fail; missi
 
   - I caught that the repo URL was filled in up in the artifact table but the reproduce command below it still had a <repo> placeholder — I fixed the clone command to use the real URL.
 
-  - I reread the tie-break paragraph against my own scoring table and caught that it said 'three other options' when the table only shows two tied at 12 — fixed the wording to match.
+  - I reread the tie-break paragraph against my own scoring table and noticed that it said 'three other options' when the table only shows two tied at 12 — fixed the wording to match.
 
   - I checked the environment line against my own node -v and it claimed Node 22 locally — I'm actually on 20.20.2, so I corrected the Environment field to say what I actually ran it on.
 
@@ -89,4 +89,6 @@ Mutation check (each flaw alone): inclusive bound only → TC-04, 09 fail; missi
 - **Next:** a DB unique constraint on `task_id`, an outbox-pattern ledger write, a run lock per window, and a post-run duplicate-payout reconciliation alert.
 
 ## Effort
-**TODO(you):** report actual hours. Scaffolding was AI-generated in one session; count your own review, edits, docs and Loom time honestly.
+6hours
+https://www.loom.com/share/355b16309ef14487b4679d1574ee0f9e
+

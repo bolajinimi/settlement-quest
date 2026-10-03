@@ -17,7 +17,7 @@ Each criterion is scored 1–5, where 5 is worst for users, most likely, or chea
 | 4 | Notification failure rolls back or blocks the payout | 4 | 2 | 3 | 9 |
 | 5 | Payout fails but a "you've been paid" notification is still sent | 3 | 2 | 4 | 9 |
 
-> My reasons fro ranking #1 first
+> My reasons for ranking #1 first
 ## Why #1 ranked first
 Out of the 5 candidate failures, I ranked #1 first because it had the same score as two other options. I broke the tie based on **how much of the root cause it covers**.
 
@@ -28,7 +28,7 @@ The root cause of #1 is missing task-level idempotency and an unclear time inter
 #3 is mainly a parsing issue, so fixing it would not prevent double payments.
 
 
-It is also the hardest to notice: both runs succeed, totals look plausible, and it repeats every week. "Hardest to notice" refers to the double-payout defect as a whole, because both settlement runs complete with no error, no crash, no alert — the totals just look like normal successful payouts
+Out of the 3 I choosed #1  because both settlement runs complete with no error, no crash, no alert — the totals just look like normal successful payouts
 
 ## Affected users
 - **Task completers:** They may get paid too much at first and then have the extra money taken back. This can reduce their trust in the system.

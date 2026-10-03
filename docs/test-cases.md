@@ -57,4 +57,12 @@ Fixture runs: **W40** = Tue 2026-10-06 09:00Z, **W41** = Tue 2026-10-13 09:00Z (
 | Only flaw A (inclusive `<=` bound) | TC-04, TC-09 |
 | Only flaw B (no ledger check) | TC-12, TC-13, TC-15 |
 
-TC-05 only fails when both flaws are present. It documents the user-visible incident, but on its own it would **not** block a partial regression. The release gate is the whole suite.
+TC-05 only fails when both flaws are present. it doesn't allow partial regression. Which is why  the release gate is the whole suite and not just one test.
+
+
+
+
+
+
+
+It documents the user-visible incident, but on its own it would **not** block a partial regression.Which is why  the release gate is the whole suite and not just one test.
