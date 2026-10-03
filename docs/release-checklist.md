@@ -10,7 +10,7 @@
 | 6 | Timezone: offsets converted to UTC; offset-less rejected | TC-07–10 | ✅ |
 | 7 | Idempotency: in-batch duplicate, retry, cross-run | TC-11–13 | ✅ |
 | 8 | Partial failure: notification failure keeps payout; payout failure blocks notification and stays retryable | TC-14–16 | ✅ |
-| 9 | CI gate configured | `.github/workflows/regression.yml` | ⚠️ Written but not yet run on GitHub; confirm after push |
+| 9 | CI gate configured and passing | [`regression.yml`](https://github.com/bolajinimi/settlement-quest/actions/runs/37094239581) run 37094239581 | ✅ |
 | 10 | Crash between payout and ledger write | not covered | ❌ Known gap |
 | 11 | Ledger uniqueness enforced at storage level | in-memory only | ❌ Production follow-up |
 | 12 | Concurrent runs for the same window | not covered | ❌ Known gap |

@@ -5,7 +5,7 @@
 | Component | Weekly rewards settlement (`src/settle.faulty.ts`), synthetic fixture |
 | Severity | **Critical / S1**: release blocker |
 | Status | Fixed in `src/settle.ts`; regression suite in place |
-| Environment | Local Node 22, Vitest, in-memory fakes. **No live system was tested.** |
+| Environment | Local Node 20.20.2, Vitest, in-memory fakes. **No live system was tested.** |
 
 ## Summary
 A task whose `completedAt` instant equals the window's upper bound (Monday 00:00:00 UTC) is included in the run that should exclude it **and** in the following run. The user receives 20 credits for one task and two "you've been paid" notifications.

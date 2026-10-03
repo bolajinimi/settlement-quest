@@ -18,14 +18,21 @@ Each criterion is scored 1–5, where 5 is worst for users, most likely, or chea
 | 5 | Payout fails but a "you've been paid" notification is still sent | 3 | 2 | 4 | 9 |
 
 ## Why #1 ranked first
-Three options tie on score, so I broke the tie by **coverage of root cause**. #1's root cause is task-level idempotency missing, plus an ambiguous interval. Fixing it properly also fixes #2 (retry) and forces the boundary half of #3 to be specified exactly. #2 alone can be "fixed" with a run-level lock, which would leave cross-run duplicates open. #3 alone is a parsing fix that doesn't stop double payment.
+Out of the 5 candidate failures, I ranked #1 first because it had the same score as two other options. I broke the tie based on **how much of the root cause it covers**.
 
-It is also the hardest to notice: both runs succeed, totals look plausible, and it repeats every week.
+The root cause of #1 is missing task-level idempotency and an unclear time interval. Fixing it properly would also solve #2 (retry issues) and make the boundary conditions in #3 clear.
+
+#2 could be fixed with a run-level lock, but that would still allow duplicates across different runs.
+
+#3 is mainly a parsing issue, so fixing it would not prevent double payments.
+
+
+It is also the hardest to notice: both runs succeed, totals look plausible, and it repeats every week. "Hardest to notice" refers to the double-payout defect as a whole, because both settlement runs complete with no error, no crash, no alert — the totals just look like normal successful payouts
 
 ## Affected users
-- **Task completers:** a short-term overpayment, then a clawback. That damages trust more than the original bug.
-- **Finance and ops:** reconciliation mismatches with no error logged.
-- **Support:** tickets after a clawback.
+- **Task completers:** They may get paid too much at first and then have the extra money taken back. This can reduce their trust in the system.
+- **Finance and ops:** They may see payment records that do not match, without any error being reported.
+- **Support:** They may receive support requests from users after their payments are taken back.
 
 ## Evidence
 - The rule in the brief is explicit: upper bound excluded, task IDs counted once, retries must not pay twice.
