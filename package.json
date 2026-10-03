@@ -1,0 +1,19 @@
+{
+  "name": "settlement-quest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Regression check for a boundary double-payout defect in a weekly rewards settlement flow (synthetic, assessment-only).",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --reporter=verbose",
+    "test:fixed": "IMPL=fixed vitest run --reporter=verbose",
+    "test:faulty": "IMPL=faulty vitest run --reporter=verbose",
+    "typecheck": "tsc --noEmit",
+    "verify": "bash scripts/verify.sh"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^22.0.0"
+  }
+}

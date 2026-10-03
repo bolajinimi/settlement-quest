@@ -1,0 +1,27 @@
+
+ RUN  v2.1.9 /home/claude/settlement-quest
+
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > window rule > TC-00 Tuesday 09:00 UTC run covers [prev Mon 00:00Z, this Mon 00:00Z)
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > happy path > TC-01 three completed tasks mid-window → 30 credits, one notification
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > happy path > TC-02 two users settle independently
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > cut-off boundaries > TC-03 completed exactly at lower bound (Mon 00:00:00Z) → included
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > cut-off boundaries > TC-04 completed exactly at upper bound (next Mon 00:00:00Z) → excluded
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > cut-off boundaries > TC-05 [SELECTED DEFECT] boundary task is paid exactly once across two consecutive runs
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > cut-off boundaries > TC-06 last millisecond before upper bound → included
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > timezone conversion > TC-07 Lagos time Mon 00:30 (+01:00) = Sun 23:30Z → included
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > timezone conversion > TC-08 Sun 23:30 at -02:00 = Mon 01:30Z → excluded
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > timezone conversion > TC-09 Mon 01:00 at +01:00 = exactly Mon 00:00Z → excluded (boundary via offset)
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > timezone conversion > TC-10 timestamp without an offset is rejected, not guessed
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > duplicates and retries > TC-11 same task ID twice in one feed → paid once
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > duplicates and retries > TC-12 settlement job retried for the same window → no second payout or notification
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > duplicates and retries > TC-13 task already paid last week reappears with a corrected timestamp → not paid again
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > partial failure > TC-14 notification fails → payout stands, recorded in ledger, status=failed
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > partial failure > TC-15 payout fails → no ledger entry, no notification; recovery run pays exactly once
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > partial failure > TC-16 one user's payout failure does not block another user
+ ✓ test/settle.spec.ts > settlement [IMPL=fixed] > eligibility > TC-17 pending and cancelled tasks are not paid
+
+ Test Files  1 passed (1)
+      Tests  18 passed (18)
+   Start at  03:44:07
+   Duration  365ms (transform 96ms, setup 0ms, collect 109ms, tests 11ms, environment 0ms, prepare 52ms)
+
