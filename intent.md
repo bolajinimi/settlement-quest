@@ -1,6 +1,6 @@
 # intent.md: Why this problem?
 
-> Draft scaffolded with AI (Claude). **Edit this into your own words before submitting**, especially the "why I care" line.
+> Draft scaffolded with AI (Claude).
 
 ## Context
 I used the brief's fictional rewards-settlement case rather than any employer system. All data is synthetic, and no live financial system was touched.
@@ -17,6 +17,7 @@ Each criterion is scored 1–5, where 5 is worst for users, most likely, or chea
 | 4 | Notification failure rolls back or blocks the payout | 4 | 2 | 3 | 9 |
 | 5 | Payout fails but a "you've been paid" notification is still sent | 3 | 2 | 4 | 9 |
 
+> My reasons fro ranking #1 first
 ## Why #1 ranked first
 Out of the 5 candidate failures, I ranked #1 first because it had the same score as two other options. I broke the tie based on **how much of the root cause it covers**.
 

@@ -144,6 +144,6 @@ AssertionError: expected 20 to be 10 // Object.is equality
 
  Test Files  1 failed (1)
       Tests  6 failed | 12 passed (18)
-   Start at  05:32:11
-   Duration  215ms (transform 66ms, setup 0ms, collect 66ms, tests 9ms, environment 0ms, prepare 32ms)
+   Start at  11:29:56
+   Duration  208ms (transform 60ms, setup 0ms, collect 60ms, tests 10ms, environment 0ms, prepare 35ms)
 
